@@ -1,0 +1,104 @@
+.footer {
+    
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include viewport-lg{
+            flex-direction: row;
+            padding: 20px 0;
+        }
+    }
+
+
+    &__logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0 25px;
+        gap: 25px;
+        @include viewport-lg{
+            flex-direction: row;
+            gap: 32px;
+            align-items: center;
+            padding: 0;
+            flex: 1 1 40%;
+        }
+    }
+
+
+    &__logo--link {
+        display: block;
+    }
+
+
+    &__logo--img {
+        display: block;
+    }
+
+
+    &__logo--logo {
+        width: 200px;
+        height: 50px;
+        @include viewport-lg{
+            width: 296px;
+            height: 74px;
+        }
+    }
+
+
+    &__logo--bird {
+        width: 116px;
+        height: 50px;
+        @include viewport-lg{
+            width: 172px;
+            height: 74px;
+        }
+    }
+
+
+    &__box {
+        background: $bg-color;
+        padding-top: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+        padding: 25px 0;
+        @include viewport-lg{
+            background: $basic-white;
+            flex-direction: row;
+            gap: 32px;
+            padding: 0;
+            flex: 1 1 40%;
+        }
+    }
+
+
+    &__box--link {
+        @include text;
+        text-decoration: none;
+        color: $main-color;
+
+    }
+
+    &__dark{
+        width: 100%;
+        background: $main-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__dark--text{
+        color: $basic-white;
+        font-size: 12px;
+        padding: 15px 0;
+    }
+}
+

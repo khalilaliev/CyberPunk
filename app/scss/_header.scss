@@ -1,0 +1,148 @@
+
+.swiper{
+    height: 100vh;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    padding: 20px 0;
+
+    &__inner {
+        text-align: center;
+        @include viewport-lg{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+
+    &__logo {
+    }
+
+
+    &__img {
+        @include viewport-lg{
+            width: 290px;
+            height: 70px;
+        }
+    }
+
+
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+        align-items: center;
+        @include viewport-lg{
+            gap: 40px;
+        }
+    }
+
+
+    &__list--item {
+    }
+
+
+    &__list--link {
+    }
+
+
+    &__icon {
+        width: 25px;
+        height: 25px;
+        transition: all .3s linear;
+        &:hover{
+            transform: scale(1.3);
+        }
+        @include viewport-lg{
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+.slider{
+    position: relative;
+    height: 100vh;
+
+    &__img{
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+    &__img--custom{
+        filter: contrast(120%);
+    }
+    &__box{
+        background: $link-color;
+        min-height: 207px;
+        width: 100%;
+        padding: 30px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 50;
+        clip-path: polygon(10% 0, 100% 0, 100% 83%, 90% 100%, 0 100%, 0 17%);
+        @include viewport-lg{
+            max-width: 624px;
+            min-height: 369px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: auto;
+            padding: 70px;
+
+
+        }
+    }
+    &__box--title{
+        @include title;
+        letter-spacing: 2px;
+        text-align: center;
+        margin-bottom: 25px;
+        @include viewport-lg{
+            text-align: left;
+        }
+
+    }
+    &__box--link{
+        @include subtitle;
+        background: $main-color;
+        padding: 20px 0;
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        color: $link-color;
+        transition: all .3s linear;
+        animation: link .4s linear infinite alternate;
+        &:hover{
+            background: $link-color;
+            color: $main-color;
+            outline: 1px solid $main-color;
+        }
+        &:hover{
+            animation-play-state: paused;
+        }
+        @include viewport-lg{
+            max-width: 272px;
+        }
+    }
+}
+
+@keyframes link {
+    0% {
+        transform: scale(1.03);
+    }
+    50%{
+        transform: scale(1.04);
+    }
+    100%{
+        transform: scale(1.05);
+    }
+}

@@ -1,0 +1,126 @@
+.description {
+    padding-bottom: 70px;
+    background: $main-color;
+    position: relative;
+
+
+	&__inner {
+        @include viewport-lg{
+            display: flex;
+            flex-direction: row;
+            gap: 32px;
+        }
+	}
+
+
+	&__images {
+        background: url('../images/hero.png');
+        min-height: 198px;
+        width: 100%;
+        
+        // padding: 0 -12px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        @include viewport-lg{
+            max-width: 332px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+        }
+        @include viewport-xxl{
+            max-width: 944px;
+        }
+        // margin-left: auto;
+        // object-fit: cover;
+        // @include viewport-lg{
+        //     flex: 1 1 20%;
+        //     margin: 0px 0px -70px -12px;
+            
+        // }
+        // background: url('../images/hero.png') no-repeat cover / center;
+	}
+
+
+	&__info {
+        @include viewport-lg{
+            // flex: 1 1 70%;
+            // max-width: 600px;
+            // margin-left: auto;
+            // flex: 1 1 70%;
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: flex-end;
+            width: 67%;
+            margin-left: auto;
+        }
+        @include viewport-xxl{
+            width: 49%;
+        }
+
+	}
+
+
+	&__info--title {
+        @include title;
+        color: $basic-white;
+        margin-top: 40px;
+	}
+
+
+	&__info--subtitle {
+        @include subtitle;
+        margin-top: 25px;
+	}
+
+    &__info--custom{
+        margin-top: 75px;
+    }
+
+
+	&__list {
+        margin-top: 22px;
+
+	}
+
+
+	&__list--item {
+        @include text;
+        color: $basic-white;
+        padding: 5px 0px 5px 42px;
+        margin-top: 18px;
+        line-height: 25px;
+
+        &:nth-child(1){
+            background: url('../images/disk.svg') no-repeat;
+        }
+        &:nth-child(2){
+            background: url('../images/second.svg') no-repeat;
+        }
+        &:nth-child(3){
+            background: url('../images/collections.svg') no-repeat;
+        }
+	}
+
+
+	&__box {
+        margin-top: 25px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 40px;
+        @include viewport-lg{
+            max-width: 300px;
+        }
+	}
+
+
+	&__box--link {
+        
+	}
+
+
+	&__box--img {
+	}
+}

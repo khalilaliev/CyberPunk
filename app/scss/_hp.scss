@@ -1,0 +1,146 @@
+.hp {
+    padding: 70px 0;
+    background: $link-color;
+
+
+    &__inner {
+        @include viewport-lg{
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+        @include viewport-xxl{
+            align-items: center;
+        }
+    }
+
+
+    &__pc {
+    }
+
+
+    &__pc--img {
+        width: 100%;
+        min-height: 204px;
+        transition: all .3s linear;
+        &:hover{
+            transform: scale(1.05);
+        }
+    }
+
+
+    &__icon {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 25px;
+        @include viewport-lg{
+            flex-direction: column;
+            gap: 25px;
+        }
+        @include viewport-xxl{
+            flex-direction: row;
+            gap: 25px;
+            margin-top: 30px;
+        }
+    }
+
+
+    &__icon--hp {
+        width: 43px;
+        height: 43px;
+        transition: all .3s linear;
+        &:hover{
+            transform: scale(1.05);
+        }
+        @include viewport-lg{
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    &__icon--lines{
+        height: 10px;
+        width: 49px;
+        transition: all .3s linear;
+        &:hover{
+            transform: scale(1.05);
+        }
+        @include viewport-lg{
+            width: 90px;
+            height: 20px;
+        }
+    }
+
+    &__icon--logo{
+        width: 175px;
+        height: 45px;
+        transition: all .3s linear;
+        &:hover{
+            transform: scale(1.05);
+        }
+        @include viewport-lg{
+            width: 320px;
+            height: 80px;
+        }
+    }
+
+
+    &__info {
+    }
+
+
+    &__info--title {
+        @include title;
+        margin-top: 40px;
+    }
+
+
+    &__info--text {
+        @include text;
+        margin-top: 25px;
+        color: $main-color;
+    }
+
+
+    &__list {
+        margin-top: 25px;
+    }
+
+
+    &__info--item {
+        @include text;
+        color: $main-color;
+        line-height: 25px;
+        padding: 5px 0px 5px 42px;
+        margin-top: 20px;
+
+            &:nth-child(1){
+                background: url('/images/paint.svg') no-repeat; 
+            }
+            &:nth-child(2){
+                background: url('/images/star.svg') no-repeat;
+            }
+            &:nth-child(3){
+                background: url('/images/gallery.svg') no-repeat;
+            }
+
+    }
+    &__info--link {
+        font-weight: 700;
+        text-decoration: none;
+        color: $link-color;
+        background: $main-color;
+        padding: 18px 50px;
+        margin-top: 40px;
+        display: inline-block;
+        transition: all .3s linear;
+        &:hover{
+            background: $link-color;
+            color: $main-color;
+            outline: 1px solid $main-color;
+        }
+
+    }
+}
+

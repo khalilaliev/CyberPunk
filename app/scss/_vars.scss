@@ -1,0 +1,79 @@
+// ! VARS
+
+$main-color: #000;
+$link-color: #F8F200;
+$text-color: #777;
+$basic-white: #fff;
+$subtitle-color: #52BEDC;
+$bg-color: #E6E6E6;
+
+
+// ! BREAKPOINTS
+
+$breakpoint-lg: 1024px;
+$breakpoint-xxl: 1920px;
+
+// ! MIXINS
+
+@mixin viewport-lg {
+	@media screen and (min-width: $breakpoint-lg) {
+		@content;
+	}
+}
+
+@mixin viewport-xxl {
+	@media screen and (min-width: $breakpoint-xxl) {
+		@content;
+	}
+}
+
+@mixin title {
+    font-family: 'Archangelsk';
+    color: $main-color;
+    font-size: 30px;
+    line-height: normal;
+    @include viewport-lg{
+        font-size: 62px;
+    }
+}
+
+@mixin text {
+    color: $text-color;
+    font-size: 16px;
+    line-height: 32px;
+    @include viewport-lg{
+        font-size: 18px;
+    }
+}
+
+@mixin input {
+    color: $basic-white;
+    font-size: 16px;
+    line-height: normal;
+    @include viewport-lg{
+        font-size: 18px;
+    }
+}
+
+@mixin button {
+    color: $main-color;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: normal;
+    padding: 15px 50px;
+    background: $link-color;
+    @include viewport-lg{
+        font-size: 18px;
+    }
+}
+
+@mixin subtitle {
+    color: $subtitle-color;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    @include viewport-lg{
+        font-size: 24px;
+    }
+}
