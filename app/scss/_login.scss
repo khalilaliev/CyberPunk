@@ -1,0 +1,234 @@
+.login {
+    background: $main-color;
+    color: $basic-white;
+    padding: 140px 0;
+    position: relative;
+
+    &__top{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        min-height: 70px;
+    }
+    &__down{
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        min-height: 70px;
+    }
+
+
+    &__inner {
+        @include viewport-lg{
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 32px;
+
+        }
+    }
+
+
+    &__box {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 50px;
+        @include viewport-lg{
+            flex-direction: column;
+            flex: 1 1 48%;
+            justify-content: center;
+            gap: 50px;
+            align-items: flex-end;
+        }
+        @include viewport-xxl{
+            align-items: center;
+        }
+
+    }
+
+
+    &__box--link {
+        display: block;
+        @include viewport-lg{
+            
+        }
+    }
+
+
+    &__box--img {
+        @include viewport-lg{
+            width: 296px;
+            height: 351px;
+        }
+    }
+
+
+    &__description {
+        @include viewport-lg{
+            flex-direction: column;
+            flex: 1 1 48%;
+        }
+    }
+
+
+    &__description--title {
+        @include title;
+        color: $basic-white;
+        margin-bottom: 25px;
+    }
+
+
+    &__description--text {
+        @include text;
+        color: $basic-white;
+        margin-bottom: 70px;
+    }
+
+
+    &__description--link {
+        text-decoration: none;
+        color: $subtitle-color;
+        font-weight: 700;
+    }
+
+
+    &__form {
+    }
+
+
+    &__form--text {
+        color: $basic-white;
+        background: none;
+        outline: none;
+        border: none;
+        margin-bottom: 50px;
+        padding-bottom: 13px;
+        border-bottom: 1px solid $text-color;
+        width: 100%;
+        &::placeholder{
+            color: $basic-white;
+        }
+    }
+
+
+    &__form--email {
+        color: $basic-white;
+        background: none;
+        outline: none;
+        border: none;
+        margin-bottom: 50px;
+        padding-bottom: 13px;
+        border-bottom: 1px solid $text-color;
+        width: 100%;
+        &::placeholder{
+            color: $basic-white;
+        }
+    }
+
+
+    &__form--label {
+        min-height: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px dashed $text-color;
+        margin-bottom: 35px;
+        width: 100%;
+        @include viewport-xxl{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+
+    &__form--file {
+        display: none;
+    }
+
+    &__form--paste{
+        text-decoration: underline;
+    }
+
+
+    &__form--type {
+        display: none;
+        @include viewport-xxl{
+            display: block;
+        }
+    }
+
+
+    // &__form--flex{
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: left;
+    // }
+
+
+    &__form--button {
+        background: $link-color;
+        color: $main-color;
+        padding: 20px 50px;
+        font-weight: 700;
+        margin-bottom: 13px;
+        transition: all .3s linear;
+        &:hover{
+            background: $main-color;
+            color: $link-color;
+            outline: 1px solid $link-color;
+        }
+    }
+
+    // &__form--checkbox {
+    //     display: none;
+    // }
+
+    // &__form--arrow{
+    //     font-size: 12px;
+    //     display: flex;
+    //     // padding-left: 24px;
+        
+    //     // @include viewport-lg{
+    //     //     display: flex;
+    //     // }
+    // }
+
+    // &__form--custome{
+    //     display: inline-block;
+    //     width: 14px;
+    //     height: 14px;
+    //     border: 1px solid $text-color;
+    //     margin-right: 14px;
+    //     &:checked{
+    //         top: 3px;
+    //         left: 5px;
+    //         width: 5px;
+    //         height: 12px;
+    //         border-bottom: 1px solid #fff;
+    //         border-right: 1px solid #fff;
+    //         transform: rotate(35deg);
+    //     }
+    // }
+
+    // &__form--checkbox{
+    //     position: absolute;
+    //     display: none;
+    // }
+
+    // &__form--span{
+    //     cursor: pointer;
+    //     position: relative;
+    //     // display: block;
+    //     width: 14px;
+    //     height: 14px;
+    //     border: 1px solid $text-color;
+    // }
+
+
+}
+
+
